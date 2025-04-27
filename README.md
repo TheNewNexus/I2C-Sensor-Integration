@@ -1,4 +1,4 @@
-## I²C Sensor Integration
+# I²C Sensor Integration
 
 This embedded system uses I²C to interface both an MPU6050 gyroscope/accelerometer and a TCS34725 color sensor. The TCS34725 detects colors from a piece of paper mounted on a servo, and the detected color is mirrored on an RGB LED. The servo's position is controlled via PWM, allowing dynamic adjustment to scan or present different colored areas.
 
