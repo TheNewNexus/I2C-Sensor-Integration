@@ -17,7 +17,7 @@ This embedded system integrates multiple I²C devices-a TCS34725 color sensor, M
 - **16x2 LCD Display (I²C Interface)**
   - Communicates via I²C (commonly 0x27 or 0x3F).
   - Displays detected color values, servo position, and system information.
-  - Reduces MCU pin usage to just SDA/SCL for display control[2][4][6].
+  - Reduces MCU pin usage to just SDA/SCL for display control.
 
 - **Servo Motor**
   - Controlled via PWM.
@@ -39,9 +39,9 @@ This embedded system integrates multiple I²C devices-a TCS34725 color sensor, M
 
 3. **Display and Mirroring:**  
    - The MCU updates the RGB LED to match the detected color.
-   - The LCD displays the current RGB values, servo angle, and optional gyro data for user feedback[2][4][6].
+   - The LCD displays the current RGB values, servo angle, and optional gyro data for user feedback.
 
-4. **Gyro Feedback (Optional):**  
+4. **Gyro Feedback:**  
    The MPU6050 provides orientation data, which can be displayed on the LCD or used for advanced features.
 
 ---
@@ -54,7 +54,7 @@ This embedded system integrates multiple I²C devices-a TCS34725 color sensor, M
 | TCS34725    | 0x29        | Color detection         |
 | LCD 16x2    | 0x27/0x3F   | System status display   |
 
-**All devices share the same SDA/SCL lines, each with a unique address[2][4][6].**
+**All devices share the same SDA/SCL lines, each with a unique address.**
 
 ---
 
@@ -93,7 +93,7 @@ int main(void) {
 
 ## Notes
 
-- The I²C LCD display enables efficient use of MCU pins and provides a clear interface for real-time feedback[2][4][6].
+- The I²C LCD display enables efficient use of MCU pins and provides a clear interface for real-time feedback.
 - All I²C devices must have unique addresses; use an I²C scanner to confirm addresses if needed.
 - The system can be expanded with additional I²C peripherals as required.
 
